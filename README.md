@@ -1,25 +1,41 @@
-# Sandbox-Automation TOOL
-Windows Sandbox provides a lightweight desktop environment to safely run applications in isolation. Software installed inside the Windows Sandbox environment remains "sandboxed" and runs separately from the host machine. Sandbox automation. 
+# Sandbox Automation Tool User Manual
+
+## Introduction
+The Sandbox Automation Tool provides a lightweight desktop environment, Windows Sandbox, to safely run applications in isolation. Software installed inside the Windows Sandbox environment remains segregated from the host machine. The sandbox is temporary, and upon closure, all associated software, files, and states are deleted.
+
 ## Requirements
-1. Windows 10 or 11 Pro Version
-2. Turn ON Windows Sandbox Feature
-## Usage
-1. Find the folder with the power shell script.ps1 file.
-2. Type "PowerShell" in the address bar of the folder window. This will open up
-PowerShell in that folder.
-3. Run the script with the power shell commands providing it following with
-some information:
-hostfolder: Where your file is located.
-file: The name of the file you want to run in the sandbox.
-sandboxfolder: A special folder in the sandbox where your file will be.
-readonly: Decide if you want your files to be read-only in the sandbox
-(True/False).
-Syntax for sandbox command in powershell: 
-.\script.ps1 -hostfolder "C:\Sandbox" -file "example.exe" -
-sandboxfolder "C:\sandbox" -readonly True
-User-Manual for Sandbox Automation Tool 3
-When the command is entered, scripts.ps1 will launch the sandbox and run the
-provided file in the sandbox. The script.ps1 will first set the sandbox
-configuration file, in which necessary information will be written, then that
-sandbox file will launched, which will start the sandbox. This process
-automatically runs the provided file in sandbox.
+- Computer with PowerShell installed.
+- System.Windows.Forms library for GUI.
+- Windows Pro version with Sandbox feature enabled.
+
+## Getting Started
+1. Search for "Turn Windows features ON OFF" in the search bar.
+2. Choose the option to open the menu.
+3. Look for "Windows Sandbox":
+   - If checked, leave it.
+   - If not, check it, then click OK.
+
+## User Manual for Sandbox Automation Tool
+
+### Interactive Mode
+1. Find the folder with the PowerShell script file (script.ps1).
+2. Type "PowerShell" in the folder window address bar to open PowerShell in that folder.
+3. Run the script with the following commands:
+
+.\script.ps1 -hostfolder "C:\Sandbox" -file "example.exe" -sandboxfolder "C:\sandbox" -readonly True
+
+Replace parameters accordingly.
+
+### GUI Mode
+- If parameters are not provided, a GUI will prompt for necessary information.
+- Run the script: `./script.ps1`
+
+#### GUI Components
+- **Host Folder Path:** Browse to locate the folder containing your file.
+- **Arguments:** Enter the file name and sandbox folder name.
+- **Permissions:** Choose desired permissions.
+- Click "RUN" to initiate the process.
+
+### Running
+Once configured, the tool prepares the sandbox for your file. Your file will run safely within the sandbox environment, enabling observation of its behavior.
+
