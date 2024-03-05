@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+<MappedFolders>
+    <MappedFolder>
+        <HostFolder>F:\Freelancing\Enigma Machine</HostFolder>
+        <SandboxFolder>C:\sandbox</SandboxFolder>
+        <ReadOnly>True</ReadOnly>
+    </MappedFolder>
+</MappedFolders>
+<LogonCommand>
+    <Command>explorer.exe "C:\sandbox\Untitled-1.exe"</Command>
+</LogonCommand>
+</Configuration>
